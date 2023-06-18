@@ -7,9 +7,8 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockFlavorGetterPlatform
     with MockPlatformInterfaceMixin
     implements FlavorGetterPlatform {
-
   @override
-  Future<String?> getPlatformVersion() => Future.value('42');
+  Future<String?> getFlavor() => Future.value('42');
 }
 
 void main() {
@@ -24,6 +23,6 @@ void main() {
     MockFlavorGetterPlatform fakePlatform = MockFlavorGetterPlatform();
     FlavorGetterPlatform.instance = fakePlatform;
 
-    expect(await flavorGetterPlugin.getPlatformVersion(), '42');
+    expect(await flavorGetterPlugin.getFlavor(), '42');
   });
 }
