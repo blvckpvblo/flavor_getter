@@ -10,8 +10,8 @@ class MethodChannelFlavorGetter extends FlavorGetterPlatform {
   final methodChannel = const MethodChannel('flavor_getter');
 
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+  Future<String?> getFlavor() async {
+    final version = await methodChannel.invokeMethod<String>('getFlavor');
     return version;
   }
 }
