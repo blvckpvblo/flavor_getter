@@ -10,10 +10,10 @@ import XCTest
 
 class RunnerTests: XCTestCase {
 
-  func testGetPlatformVersion() {
+  func testGetFlavor() {
     let plugin = FlavorGetterPlugin()
 
-    let call = FlutterMethodCall(methodName: "getPlatformVersion", arguments: [])
+    let call = FlutterMethodCall(methodName: "getFlavor", arguments: [])
 
     let resultExpectation = expectation(description: "result block must be called.")
     plugin.handle(call) { result in

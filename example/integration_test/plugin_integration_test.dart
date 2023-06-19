@@ -14,7 +14,7 @@ import 'package:flavor_getter/flavor_getter.dart';
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
-  testWidgets('getPlatformVersion test', (WidgetTester tester) async {
+  testWidgets('getFlavor test', (WidgetTester tester) async {
     final FlavorGetter plugin = FlavorGetter();
     final String? version = await plugin.getFlavor();
     // The version string depends on the host platform running the test, so

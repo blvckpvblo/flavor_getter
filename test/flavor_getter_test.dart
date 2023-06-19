@@ -18,7 +18,7 @@ void main() {
     expect(initialPlatform, isInstanceOf<MethodChannelFlavorGetter>());
   });
 
-  test('getPlatformVersion', () async {
+  test('getFlavor', () async {
     FlavorGetter flavorGetterPlugin = FlavorGetter();
     MockFlavorGetterPlatform fakePlatform = MockFlavorGetterPlatform();
     FlavorGetterPlatform.instance = fakePlatform;

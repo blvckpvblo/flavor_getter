@@ -15,10 +15,10 @@ import org.mockito.Mockito
 
 internal class FlavorGetterPluginTest {
   @Test
-  fun onMethodCall_getPlatformVersion_returnsExpectedValue() {
+  fun onMethodCall_getFlavor_returnsExpectedValue() {
     val plugin = FlavorGetterPlugin()
 
-    val call = MethodCall("getPlatformVersion", null)
+    val call = MethodCall("getFlavor", null)
     val mockResult: MethodChannel.Result = Mockito.mock(MethodChannel.Result::class.java)
     plugin.onMethodCall(call, mockResult)
 
