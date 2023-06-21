@@ -37,7 +37,13 @@ flutter:
         package: com.thepinkchannel.flavor_getter
         pluginClass: FlavorGetterPlugin
       ios:
-        pluginClass: FlavorGetterPlugin
+        pluginClass: 
+        
+
+  repository:
+    type: git
+    url: https://github.com/blvckpvblo/flavor_getter/
+
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
