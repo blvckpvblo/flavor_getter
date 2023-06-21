@@ -51,10 +51,10 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Plugin example app'),
+          title: const Text('flavor_getter example app'),
         ),
         body: Center(
-          child: Text('Running on: $_flavor\n'),
+          child: Text('Running in flavor: $_flavor\n'),
         ),
       ),
     );
