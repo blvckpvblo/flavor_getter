@@ -56,7 +56,7 @@ No additional setup steps are required for Android.
 
 ## Usage
 
-To retrieve the current flavor in your Flutter code, you can use the `FlavorGetter.flavor` getter.
+To retrieve the current flavor in your Flutter code, you can use the `getFlavor()` function.
 
 ```dart
 import 'package:flavor_getter/flavor_getter.dart';
