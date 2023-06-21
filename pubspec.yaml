@@ -1,6 +1,6 @@
 name: flavor_getter
-description: A new Flutter plugin project.
-version: 0.0.1
+description: A plugin to retrieve the current flavor of the Flutter application.
+version: 1.0.0
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
