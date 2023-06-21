@@ -29,16 +29,16 @@ import 'package:flavor_getter/flavor_getter.dart';
 
 To use Flavor Getter in your Flutter project, you need to perform some setup steps depending on the platform you are targeting.
 
-## Disclaimer
-
-Please note that this readme assumes that you have already set up the flavors (or variants) for your iOS and Android projects. The instructions provided here focus on integrating the Flavor Getter plugin into your existing flavor setup. If you haven't set up flavors yet, please refer to the respective platform documentation to configure flavors for your project.
-
 ## Platform Support
 
 | Platform | Support |
 | -------- | ------- |
 | iOS      | ✅      |
 | Android  | ✅      |
+
+## Disclaimer
+
+Please note that this readme assumes that you have already set up the flavors (or variants) for your iOS and Android projects. The instructions provided here focus on integrating the Flavor Getter plugin into your existing flavor setup. If you haven't set up flavors yet, please refer to the respective platform documentation to configure flavors for your project.
 
 ### iOS Setup
 
