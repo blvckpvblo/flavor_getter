@@ -1,6 +1,8 @@
 name: flavor_getter
 description: A plugin to retrieve the current flavor of the Flutter application.
-version: 1.0.0
+version: 0.0.1
+repository: https://github.com/blvckpvblo/flavor_getter/
+issue_tracker: https://github.com/blvckpvblo/flavor_getter/issues
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -37,12 +39,7 @@ flutter:
         package: com.thepinkchannel.flavor_getter
         pluginClass: FlavorGetterPlugin
       ios:
-        pluginClass: 
-        
-
-  repository:
-    type: git
-    url: https://github.com/blvckpvblo/flavor_getter/
+        pluginClass: FlavorGetterPlugin
 
 
   # To add assets to your plugin package, add an assets section, like this:
