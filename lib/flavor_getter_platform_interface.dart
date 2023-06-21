@@ -24,6 +24,6 @@ abstract class FlavorGetterPlatform extends PlatformInterface {
   }
 
   Future<String?> getFlavor() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
+    throw UnimplementedError('getFlavor() has not been implemented.');
   }
 }

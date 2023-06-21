@@ -11,7 +11,7 @@ class MethodChannelFlavorGetter extends FlavorGetterPlatform {
 
   @override
   Future<String?> getFlavor() async {
-    final version = await methodChannel.invokeMethod<String>('getFlavor');
-    return version;
+    final flavor = await methodChannel.invokeMethod<String>('getFlavor');
+    return flavor;
   }
 }
