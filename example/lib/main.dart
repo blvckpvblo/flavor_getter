@@ -1,4 +1,5 @@
 /*
+ * File: main.dart
  * Flutter Plugin: Flavor Getter
  * Description: A plugin to retrieve the current flavor of the Flutter application.
  * Version: 1.0.0
