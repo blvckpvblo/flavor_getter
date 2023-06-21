@@ -13,7 +13,7 @@ void main() {
         .setMockMethodCallHandler(
       channel,
       (MethodCall methodCall) async {
-        return '42';
+        return 'dev';
       },
     );
   });
@@ -24,6 +24,6 @@ void main() {
   });
 
   test('getFlavor', () async {
-    expect(await platform.getFlavor(), '42');
+    expect(await platform.getFlavor(), 'dev');
   });
 }
