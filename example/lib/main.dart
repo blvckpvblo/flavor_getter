@@ -32,9 +32,9 @@ class _MyAppState extends State<MyApp> {
     // We also handle the message potentially returning null.
     try {
       platformVersion =
-          await _flavorGetterPlugin.getFlavor() ?? 'Unknown platform version';
+          await _flavorGetterPlugin.getFlavor() ?? 'Unknown flavor';
     } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
+      platformVersion = 'Failed to get flavor';
     }
 
     // If the widget was removed from the tree while the asynchronous platform
