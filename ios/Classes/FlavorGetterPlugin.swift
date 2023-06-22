@@ -3,7 +3,7 @@
  * Flavor Getter Plugin
  *
  * Description: A plugin to retrieve the current flavor of the Flutter application.
- * Version: 1.0.0
+ * Version: 0.0.2
  * Author: Momar Talla Cisse
  * License: BSD 3-Clause
  * Created: 2023-06-18
@@ -37,7 +37,7 @@ public class FlavorGetterPlugin: NSObject, FlutterPlugin {
           }
       }
 
-      result(config?["Flavor"])
+      result(config?["FLAVOR"])
     default:
       result(FlutterMethodNotImplemented)
     }
