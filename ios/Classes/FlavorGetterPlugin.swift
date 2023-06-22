@@ -1,5 +1,5 @@
-/*
- * FlavorGetterPlugin.kt
+ /*
+ * FlavorGetterPlugin.swift
  * Flavor Getter Plugin
  *
  * Description: A plugin to retrieve the current flavor of the Flutter application.
@@ -7,7 +7,7 @@
  * Author: Momar Talla Cisse
  * License: BSD 3-Clause
  * Created: 2023-06-18
- * Last Modified: 2023-06-21
+ * Last Modified: 2023-06-22
  */
 
 import Flutter

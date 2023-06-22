@@ -1,5 +1,5 @@
 /*
- * FlavorGetterPlugin.swift
+ * FlavorGetterPlugin.kt
  * Flavor Getter Plugin
  *
  * Description: A plugin to retrieve the current flavor of the Flutter application.
