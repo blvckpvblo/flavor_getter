@@ -56,10 +56,14 @@ Please note that this readme assumes that you have already set up the flavors (o
 2. Locate the `android/app/build.gradle` file.
 3. Inside the `android` block, ensure that the `defaultConfig` section contains the following line:
 ```groovy
-defaultConfig {
+android {
+    namespace "com.example.myapp" // Replace with your namespace
     // ...
-    applicationId "com.example.myapp" // Replace with your applicationId
-    // ...
+    defaultConfig {
+        // ...
+        applicationId "com.example.myapp" // Replace with your applicationId; make sure it's similar to namespace
+        // ...
+    }
 }
 ```
 The applicationId should match the package name defined in your AndroidManifest.xml file.
@@ -69,10 +73,10 @@ flavorDimensions "default"
 
 productFlavors {
     dev {
-        applicationIdSuffix ".dev"
+        applicationIdSuffix ".dev"  // com.example.myapp.dev
     }
     prod {
-        applicationIdSuffix ".prod"
+        applicationIdSuffix ".prod"  // com.example.myapp.prod
     }
 }
 ```
