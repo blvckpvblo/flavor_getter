@@ -1,9 +1,13 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
+/*
+ * File: widget_test.dart
+ * Flutter Plugin: Flavor Getter
+ * Description: A plugin to retrieve the current flavor of the Flutter application.
+ * Version: 0.0.2
+ * Author: Momar Talla Cisse
+ * License: BSD 3-Clause
+ * Created: 2023-06-18
+ * Last Modified: 2023-06-22
+ */
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -18,8 +22,8 @@ void main() {
     // Verify that platform version is retrieved.
     expect(
       find.byWidgetPredicate(
-        (Widget widget) => widget is Text &&
-                           widget.data!.startsWith('Running on:'),
+        (Widget widget) =>
+            widget is Text && widget.data!.startsWith('Running in flavor:'),
       ),
       findsOneWidget,
     );
