@@ -59,9 +59,11 @@ android {
     productFlavors {
         dev {
             dimension "app"
+            applicationIdSuffix ".dev"
         }
         staging {
             dimension "app"
+            applicationIdSuffix ".staging"
         }
         prod {
             dimension "app"
