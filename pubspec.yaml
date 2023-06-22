@@ -1,6 +1,6 @@
 name: flavor_getter
 description: A plugin to retrieve the current flavor of the Flutter application.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/blvckpvblo/flavor_getter/
 issue_tracker: https://github.com/blvckpvblo/flavor_getter/issues
 
