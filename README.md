@@ -89,8 +89,8 @@ To retrieve the current flavor in your Flutter code, you can use the `getFlavor(
 ```dart
 import 'package:flavor_getter/flavor_getter.dart';
 
-void main() {
-	String currentFlavor = FlavorGetter().getFlavor();
+void main() async {
+	String currentFlavor = await FlavorGetter().getFlavor();
 	print('Running in flavor: $currentFlavor');
 }
 ```
