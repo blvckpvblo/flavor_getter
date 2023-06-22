@@ -52,7 +52,31 @@ Please note that this readme assumes that you have already set up the flavors (o
 
 ### Android Setup
 
-No additional setup steps are required for Android.
+1. Open your Flutter project in Android Studio.
+2. Locate the `android/app/build.gradle` file.
+3. Inside the `android` block, ensure that the `defaultConfig` section contains the following line:
+```groovy
+defaultConfig {
+    // ...
+    applicationId "com.example.myapp" // Replace with your applicationId
+    // ...
+}
+```
+The applicationId should match the package name defined in your AndroidManifest.xml file.
+4. To add flavors, add the following lines to the android block:
+```groovy
+flavorDimensions "default"
+
+productFlavors {
+    dev {
+        applicationIdSuffix ".dev"
+    }
+    prod {
+        applicationIdSuffix ".prod"
+    }
+}
+```
+Customize the flavor names (dev and prod) and the applicationIdSuffixes (.dev and .prod) to match your desired flavors.
 
 ## Usage
 
