@@ -102,7 +102,7 @@ For a complete example of using Flavor Getter, please refer to the example direc
 Problems with Proguard
 When Proguard is enabled (which it is by default for Android release builds), it can rename the BuildConfig Java class in the minification process and prevent the library from referencing it. To avoid this, add a rule in android/app/proguard-rules.pro:
 
--keep class com.yourNewPackage.BuildConfig { *; }
+`-keep class com.yourNewPackage.BuildConfig { *; }`
 
 com.yourNewPackage should match the package value in your app/src/main/AndroidManifest.xml file.
 
