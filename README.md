@@ -11,9 +11,9 @@ To use the Flavor Getter plugin in your Flutter project, follow these steps:
 1. Add the following dependency to your project's `pubspec.yaml` file:
 ```yaml
 dependencies:
-  flavor_getter: ^1.0.0
+  flavor_getter: ^0.0.3
 ```
-Replace `^1.0.0` with the desired version of the Flavor Getter plugin.
+Replace `^0.0.3` with the desired version of the Flavor Getter plugin.
 
 2. Run the following command to fetch the dependencies:
 ```bash
@@ -66,7 +66,8 @@ android {
     }
 }
 ```
-The applicationId should match the package name defined in your AndroidManifest.xml file.
+The applicationId should match the package name defined in your `AndroidManifest.xml` file.
+
 4. To add flavors, add the following lines to the android block:
 ```groovy
 flavorDimensions "default"
@@ -81,6 +82,12 @@ productFlavors {
 }
 ```
 Customize the flavor names (dev and prod) and the applicationIdSuffixes (.dev and .prod) to match your desired flavors.
+
+5. When Proguard is enabled, which is the default for Android release builds, the `BuildConfig` Java class is renamed in the minification process and prevents the library from referencing it. To avoid this, add a rule in `android/app/proguard-rules.pro`:
+
+`-keep class com.example.yourPackageName.BuildConfig { *; }`
+
+The package name should match the `android:label` value in your `app/src/main/AndroidManifest.xml` file.
 
 ## Usage
 
@@ -97,14 +104,6 @@ void main() async {
 ## Example
 
 For a complete example of using Flavor Getter, please refer to the example directory of this plugin.
-
-## Troubleshooting
-Problems with Proguard
-When Proguard is enabled (which it is by default for Android release builds), it can rename the BuildConfig Java class in the minification process and prevent the library from referencing it. To avoid this, add a rule in android/app/proguard-rules.pro:
-
-`-keep class com.yourNewPackage.BuildConfig { *; }`
-
-com.yourNewPackage should match the package value in your app/src/main/AndroidManifest.xml file.
 
 ## Issues and Contributions
 

@@ -4,6 +4,10 @@
 
 ## 0.0.2
 
-* Fix tests (plugin tests and example app tests)
-* Fix Android bug when applicationId has suffix
-* Fix README: Typos & Android setup guide
+* **Fix:** Tests (plugin tests and example app tests)
+* **Fix:** Android bug when applicationId has suffix
+* **Fix:** README: Typos & Android setup guide
+
+## 0.0.3
+
+* **Fix:** Android app crashes on release builds due to Proguard
