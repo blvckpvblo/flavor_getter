@@ -11,3 +11,8 @@
 ## 0.0.3
 
 * **Fix:** Android app crashes on release builds due to Proguard
+
+## 0.0.4
+
+* **Fix:** Android compatibility with Flutter 3.29.3
+* **Documentation:** Updated Android setup guide with buildFeatures configuration
