@@ -11,9 +11,9 @@ To use the Flavor Getter plugin in your Flutter project, follow these steps:
 1. Add the following dependency to your project's `pubspec.yaml` file:
 ```yaml
 dependencies:
-  flavor_getter: ^0.0.3
+  flavor_getter: ^0.0.4
 ```
-Replace `^0.0.3` with the desired version of the Flavor Getter plugin.
+Replace `^0.0.4` with the desired version of the Flavor Getter plugin.
 
 2. Run the following command to fetch the dependencies:
 ```bash

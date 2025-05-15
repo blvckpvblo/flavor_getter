@@ -8,6 +8,6 @@
 * **Fix:** Android bug when applicationId has suffix
 * **Fix:** README: Typos & Android setup guide
 
-## 0.0.3
+## 0.0.4
 
 * **Fix:** Android app crashes on release builds due to Proguard
