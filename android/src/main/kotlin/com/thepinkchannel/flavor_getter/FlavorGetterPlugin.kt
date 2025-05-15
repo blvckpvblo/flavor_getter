@@ -13,7 +13,6 @@
 package com.thepinkchannel.flavor_getter
 
 import androidx.annotation.NonNull
-
 import android.content.Context
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.plugin.common.MethodCall
@@ -39,8 +38,8 @@ class FlavorGetterPlugin: FlutterPlugin, MethodCallHandler {
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
     if (call.method == "getFlavor") {
       try {
-        val flavor = getFlavor(applicationContext!!.packageName)
-
+        val packageName = applicationContext!!.packageName
+        val flavor = getFlavor(packageName)
         result.success(flavor)
       }
       catch(exception: Exception) {
@@ -56,32 +55,27 @@ class FlavorGetterPlugin: FlutterPlugin, MethodCallHandler {
     channel.setMethodCallHandler(null)
   }
 
-  fun getFlavor(fieldName: String): Any? {
-    var packageName = fieldName
-
+  fun getFlavor(packageName: String): String? {
     try {
-        val myClass = Class.forName("${packageName}.BuildConfig")
-        val fieldObj = myClass.getField("FLAVOR")
-
-        return fieldObj.get(null)
-    } catch (e: ClassNotFoundException) {
-        // Field retrieval failed, try removing the last segment of the package name
-        val lastDotIndex = packageName.lastIndexOf('.')
-        
-        if (lastDotIndex != -1) {
-            packageName = packageName.substring(0, lastDotIndex)
-
-            return getFlavor(packageName)
+        // Try with the full package name first
+        val buildConfigClassName = "$packageName.BuildConfig"
+        try {
+            val buildConfigClass = Class.forName(buildConfigClassName)
+            val flavorField = buildConfigClass.getDeclaredField("FLAVOR")
+            flavorField.isAccessible = true
+            return flavorField.get(null) as? String
+        } catch (e: ClassNotFoundException) {
+            // If not found, try with the base package name (without flavor suffix)
+            val basePackageName = packageName.substringBeforeLast(".")
+            val baseBuildConfigClassName = "$basePackageName.BuildConfig"
+            
+            val buildConfigClass = Class.forName(baseBuildConfigClassName)
+            val flavorField = buildConfigClass.getDeclaredField("FLAVOR")
+            flavorField.isAccessible = true
+            return flavorField.get(null) as? String
         }
-    } catch (e: NoSuchFieldException) {
-        // Field not found, handle accordingly
-        return null
-    } catch (e: IllegalAccessException) {
-        // Access to field failed, handle accordingly
+    } catch (e: Exception) {
         return null
     }
-
-    return null
-}
-
+  }
 }

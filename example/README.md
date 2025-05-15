@@ -1,16 +1,81 @@
 # flavor_getter_example
 
-Demonstrates how to use the flavor_getter plugin.
+This example demonstrates how to use the flavor_getter plugin in a Flutter application with multiple flavors.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Demonstrates how to retrieve the current flavor in a Flutter app
+- Shows how to set up flavors for both Android and iOS
+- Includes example code for handling different flavors in your app
 
-A few resources to get you started if this is your first Flutter project:
+## Setup
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Android Setup
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The example app is configured with three flavors:
+- dev (with .dev suffix)
+- staging (with .staging suffix)
+- prod (no suffix)
+
+The BuildConfig generation is enabled in `android/app/build.gradle`:
+```groovy
+android {
+    buildFeatures {
+        buildConfig = true
+    }
+}
+```
+
+### iOS Setup
+
+The example app includes flavor configurations in Xcode for:
+- dev
+- staging
+- prod
+
+## Running the Example
+
+To run the example app with different flavors:
+
+### Android
+```bash
+# Run with dev flavor
+flutter run --flavor dev
+
+# Run with staging flavor
+flutter run --flavor staging
+
+# Run with prod flavor
+flutter run --flavor prod
+```
+
+### iOS
+```bash
+# Run with dev flavor
+flutter run --flavor dev
+
+# Run with staging flavor
+flutter run --flavor staging
+
+# Run with prod flavor
+flutter run --flavor prod
+```
+
+## Code Example
+
+The main.dart file demonstrates how to use the flavor_getter plugin:
+
+```dart
+import 'package:flavor_getter/flavor_getter.dart';
+
+void main() async {
+  String currentFlavor = await FlavorGetter().getFlavor();
+  print('Running in flavor: $currentFlavor');
+}
+```
+
+## Additional Resources
+
+For more information about the flavor_getter plugin, visit:
+- [Plugin Documentation](https://pub.dev/packages/flavor_getter)
+- [GitHub Repository](https://github.com/blvckpvblo/flavor_getter)
